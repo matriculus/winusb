@@ -1,8 +1,7 @@
 #!bin/bash
 cd ~/Downloads
 sudo apt install wimtools -y
-sudo mkdir /media/iso
-sudo mount -o loop $1 /media/iso
+sudo mkdir /media/iso && sudo mount -o loop $1 /media/iso
 scp /media/iso/sources/install.wim ~/Downloads
 wimlib-imagex split install.wim install.swm 4000
 rsync -avr --exclude='sources/install.wim' /media/iso/ $2/
