@@ -12,5 +12,3 @@ This script works for Ubuntu and can be modified for any other distro by changin
 To run the program, run the script as follows:
 
 `$ bash winusb.sh <windows10.iso> <usb_drive_location>`
-
-*Warning: Do not use `/` at the end of USB mount drive since it is added in the script.*
