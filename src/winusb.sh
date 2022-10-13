@@ -10,11 +10,11 @@ sudo mkdir /media/iso && sudo mount -o loop $1 /media/iso && \
 echo "Mounting completed successfully!" && \
 echo "" && \
 echo "Copying main installation file for partitioning..." && \
-scp -v /media/iso/sources/install.wim ~/Downloads && \
+scp -v /media/iso/sources/install.wim /tmp && \
 echo "Copying completed successfully!" && \
 echo "" && \
 echo "Splitting the installation for FAT32 partition..." && \
-wimlib-imagex split ~/Downloads/install.wim ~/Downloads/install.swm 4000 && \
+wimlib-imagex split ~/Downloads/install.wim /tmp/install.swm 4000 && \
 echo "Splitting completed sccessfully!" && \
 echo "" && \
 echo "Copying the ISO contents to USB" && \
